@@ -12,8 +12,10 @@ Selain->Palvelin HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
 Palvelin->Selain Vastaus HTTP-statuskoodilla 302,
 eli kehottaa selainta tekemään HTTP GET-pyynnön kohteeseen notes
 
-//Selain lataa uudelleen muistiinpanojen sivun ja sen seurauksena syntyy kolme muuta HTTP-pyyntöä:
-  main.css, main.js ja data.json.
+note over Selain
+Selain lataa uudelleen muistiinpanojen sivun ja sen seurauksena syntyy kolme muuta HTTP-pyyntöä:
+main.css, main.js ja data.json.
+end note
 
 Selain->Palvelin HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
 
@@ -23,15 +25,48 @@ Selain->Palvelin HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
 
 Palvelin->Selain Lähettää main.js tiedoston
 
-//Selain alkaa suorittaa .js koodia, joka pyytää JSON-datan palvelimelta
+note over Selain
+Selain alkaa suorittaa .js koodia, joka pyytää JSON-datan palvelimelta
+end note
 
 Selain->Palvelin HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
 
 Palvelin->Selain [{ content: "Uusi muistiinpano", date: "2022-06-06" }, ...]
 
+note over Selain
 Selain suorittaa tapahtumankäsittelijän
-joka renderöi muistiinpanot näytölle
+joka esittää muistiinpanot näytöllä
+end note
 ```
 # 0.5 tehtävä
 
+![image](https://user-images.githubusercontent.com/60025887/174744542-1ed94b54-7b1f-4780-b0ce-e80e79b9d146.png)
 
+```
+Selain->Palvelin HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+
+Palvelin-->Selain Palauttaa HTML-koodin
+
+Selain->Palvelin HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+
+Palvelin-->Selain Lähettää tiedoston main.css
+
+Selain->Palvelin HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+
+Palvelin-->Selain Lähettää tiedoston spa.js
+
+note over Selain
+Selain alkaa suorittaa palvelimen
+lähettämää .js koodia, 
+joka pyytää JSON-datan palvelimelta
+end note
+
+Selain->Palvelin HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+Palvelin-->Selain [{ content: "Uusi muistiinpano", date: "2022-06-06" }, ...]
+
+note over Selain
+Selain suorittaa tapahtumankäsittelijän
+joka esittää muistiinpanot näytöllä
+end note
+```
