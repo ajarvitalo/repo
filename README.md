@@ -3,7 +3,7 @@ Fullstack open kurssi
 
 # 0.4 tehtävä
 
-![image](https://user-images.githubusercontent.com/60025887/174735049-db96e75d-fe7a-4622-84bf-595fcc9d2fd5.png)
+![image](https://user-images.githubusercontent.com/60025887/174753531-7e350156-dd77-4706-a1ba-41591947da00.png)
 
 
 ```
@@ -40,7 +40,7 @@ end note
 ```
 # 0.5 tehtävä
 
-![image](https://user-images.githubusercontent.com/60025887/174744542-1ed94b54-7b1f-4780-b0ce-e80e79b9d146.png)
+![image](https://user-images.githubusercontent.com/60025887/174753057-84b34bb9-4513-4ffc-84ca-96d0b3931d02.png)
 
 ```
 Selain->Palvelin HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
@@ -73,7 +73,7 @@ end note
 
 # 0.6 tehtävä
 
-![image](https://user-images.githubusercontent.com/60025887/174748420-a34e66ea-207d-435d-b898-182bc67d2faf.png)
+![image](https://user-images.githubusercontent.com/60025887/174752345-51d5cb2a-f0d5-4ae9-b434-bba2d742e9b8.png)
 
 ```
 Selain->Palvelin POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
