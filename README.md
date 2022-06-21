@@ -1,9 +1,12 @@
 # repo
 Fullstack open kurssi
-![image](https://user-images.githubusercontent.com/60025887/174735049-db96e75d-fe7a-4622-84bf-595fcc9d2fd5.png)
 
 0.4 tehtävä
 
+![image](https://user-images.githubusercontent.com/60025887/174735049-db96e75d-fe7a-4622-84bf-595fcc9d2fd5.png)
+
+
+<sub> 
 Selain->Palvelin HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
 
 Palvelin->Selain Vastaus HTTP-statuskoodilla 302,
@@ -28,4 +31,4 @@ Palvelin->Selain [{ content: "Uusi muistiinpano", date: "2022-06-06" }, ...]
 
 Selain suorittaa tapahtumankäsittelijän
 joka renderöi muistiinpanot näytölle
-
+</sub>
