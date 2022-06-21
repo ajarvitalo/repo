@@ -70,3 +70,18 @@ Selain suorittaa tapahtumankäsittelijän
 joka esittää muistiinpanot näytöllä
 end note
 ```
+
+# 0.6 tehtävä
+
+![image](https://user-images.githubusercontent.com/60025887/174748420-a34e66ea-207d-435d-b898-182bc67d2faf.png)
+
+```
+Selain->Palvelin POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over Selain
+Pyyntö sisältää uuden muistiinpanon muodossa JSON, 
+joka sisältää sisällön(content) ja aikaleiman(date)
+end note
+
+Palvelin->Selain Statuskoodi 201 created
+```
