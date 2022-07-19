@@ -146,3 +146,81 @@ const App = () => {
 };
 export default App
 ```
+
+# tehtävä 1.3
+```
+const App = () => {
+  const course = {
+    name: 'Half Stack application development',
+    
+  
+  part1: 
+    { 
+    name: 'Fundamentals of React',
+    exercises: 10,
+  },
+  
+  part2: 
+  {
+    name: 'Using props to pass data',
+    exercises: 7,
+  },
+  
+  part3: 
+  {
+    name: 'State of a component',
+    exercises: 14,
+  }
+
+  }
+  const Content = (props) => {
+    console.log(props)
+    return (
+      <div>
+        <Part name = {props.part1.name} exercises = {props.part1.exercises}/>
+        <Part name = {props.part2.name} exercises = {props.part2.exercises}/>
+        <Part name = {props.part3.name} exercises = {props.part3.exercises}/>  
+      </div>
+    )
+  };
+
+  const Header = (props) => {
+    console.log(props)
+    return (
+        <h1>{props.course.name}</h1>
+
+    )
+  };
+
+  const Part = (props) => {
+    console.log(props)
+    return (
+      
+        <p>{props.name} {props.exercises}</p>
+      
+    )
+  };
+  const Total = (props) => {
+    console.log(props)
+    return (
+      
+        
+        <p>Number of exercises {props.exercises}</p>
+        
+      
+    )
+  };
+  
+
+
+  return (
+    <div>
+      <Header course = {course.name}/>
+      <Content part1 = {course.part1} part2 = {course.part2}  part3 = {course.part3}/>
+      <Total exercises = {course.part1.exercises+course.part2.exercises+course.part3.exercises}/>
+    </div>
+    
+  )
+};
+export default App
+```
