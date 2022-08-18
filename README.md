@@ -273,7 +273,7 @@ const App = () => {
     const yhteensa = parts.reduce((yhteen, object) => {
 
         return yhteen + object.exercises;
-    },0);
+        },0);
 
         return (
           <p>Number of exercises {yhteensa}</p> 
