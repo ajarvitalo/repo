@@ -224,3 +224,72 @@ const App = () => {
 };
 export default App
 ```
+
+# tehtävä 1.4
+```
+const App = () => {
+  const course =  'Half Stack application development'
+  const parts = [  
+   
+  { 
+    name: ' Fundamentals of React ',
+    exercises: 10
+  },
+   
+  {
+    name: ' Using props to pass data ',
+    exercises: 7
+  },
+   
+  {
+    name: ' State of a component ',
+    exercises: 14
+  }
+  ]
+  
+  const Content = (props) => {
+    console.log(props)
+    return (
+      
+      parts.map(getKaikkiOsat));
+        function getKaikkiOsat(item) {
+          return [item.name, item.exercises]
+        }
+      
+    
+  };
+
+  const Header = (props) => {
+    console.log(props)
+    return (
+        <h1>{props.course}</h1>
+
+    )
+  };
+
+  const Total = (props) => {
+    console.log(props)
+
+    const yhteensa = parts.reduce((yhteen, object) => {
+
+        return yhteen + object.exercises;
+    },0);
+
+        return (
+          <p>Number of exercises {yhteensa}</p> 
+        )
+  };
+  
+
+
+  return (
+    <div>
+      <Header course = {course}/>
+      <Content parts = {parts}/>
+      <Total parts = {parts}/>
+    </div>
+    
+  )
+};
+export default App
+```
